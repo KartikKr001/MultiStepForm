@@ -17,12 +17,15 @@ A responsive and user-friendly multi-step form with validation, dark mode toggle
 ## Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/multi-step-form.git
+   git clone [https://github.com/yourusername/multi-step-form.git](https://github.com/KartikKr001/MultiStepForm.git)
 2. Navigate to the project directory:
    ```sh
    cd multi-step-form
    ```
 3. Open `index.html` in your browser.
+
+## Live Demo
+Check out the live version here: [Multi-Step Form](https://multi-step-form-six-tau.vercel.app/)
 
 ## Usage
 - Fill in the required fields and proceed step by step.
@@ -39,4 +42,3 @@ A responsive and user-friendly multi-step form with validation, dark mode toggle
 - **Component-Based Approach**: Could be rewritten in React/Vue for modularity.
 - **Backend Integration**: API support for data submission.
 - **Accessibility Improvements**: ARIA attributes and keyboard navigation.
-
