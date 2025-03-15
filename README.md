@@ -17,7 +17,7 @@ A responsive and user-friendly multi-step form with validation, dark mode toggle
 ## Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/yourusername/multi-step-form.git](https://github.com/KartikKr001/MultiStepForm.git)
+   git clone https://github.com/KartikKr001/MultiStepForm.git
 2. Navigate to the project directory:
    ```sh
    cd multi-step-form
