@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <form id="multi-step-form">
+            <div class="step" id="step-1">
+                <div class="clear-but">
+                    <h2>Basic Details</h2>
+                    <div class="buttons top-right">
+                        <button type="button" id="clear-1">Clear</button>
+                        <button type="button" id="theme-toggle-1">Toggle Dark Mode</button>
+                    </div>
+                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                <span class="error" id="error-name">Please enter a valid name.</span>
+                
+                <label for="dob">DOB:</label>
+                <input type="date" id="dob" name="dob" required>
+                <span class="error" id="error-dob">You must be at least 18 years old.</span>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class="error" id="error-gender">Please select a gender.</span>
+                
+                <div class="buttons" id="nex-1">
+                    <button type="button" id="next-1" disabled>Next</button>
+                </div>
+            </div>
+            
+            <div class="step inactive" id="step-2">
+                <div class="clear-but">
+                    <h2>Contact Information</h2>
+                    <div class="buttons">
+                        <button type="button" id="clear-2">Clear</button>
+                        <button type="button" id="theme-toggle-2">Toggle Dark Mode</button>
+                    </div>
+                </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your Email">
+                <span class="error" id="error-email">Enter a valid email address.</span>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="Enter your Mobile Number">
+                <span class="error" id="error-phone">Enter a valid 10-digit phone number.</span>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+                <span class="error" id="error-address">Address cannot be empty.</span>
+                
+                <div class="buttons">
+                    <button type="button" id="back-1">Back</button>
+                    <button type="button" id="next-2" disabled>Next</button>
+                </div>
+            </div>
+            
+            <div class="step inactive" id="step-3">
+                <div class="clear-but">
+                    <h2>Preview Your Details</h2>
+                    <div class="buttons top-right">
+                        <button type="button" id="clear-3">Clear</button>
+                        <button type="button" id="theme-toggle-3">Toggle Dark Mode</button>
+                    </div>
+                </div>
+                <p><strong>Name:</strong> <span id="preview-name"></span></p>
+                <p><strong>DOB:</strong> <span id="preview-dob"></span></p>
+                <p><strong>Gender:</strong> <span id="preview-gender"></span></p>
+                <p><strong>Email:</strong> <span id="preview-email"></span></p>
+                <p><strong>Phone:</strong> <span id="preview-phone"></span></p>
+                <p><strong>Address:</strong> <span id="preview-address"></span></p>
+                
+                <div class="buttons">
+                    <button type="button" id="edit">Edit</button>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

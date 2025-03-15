@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+:root {
+    --primary-color: whitesmoke;
+    --background-color: linear-gradient(135deg, #a3b3cc, #80deea);
+    --text-color : #333;
+}
+
+.dark-mode{
+    --primary-color: #333;
+    --background-color: linear-gradient(135deg, #333, #555);
+    --text-color : #fff;
+}
+body {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+.container {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    min-width: 320px;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.step:not(.inactive) {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+
+.error {
+    display: none;
+    color: rgb(255, 0, 0);
+    font-size: 0.9rem;
+}
+
+
+.clear-but{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #00796b;
+    transition: width 0.5s ease-in-out;
+}
+#nex-1{
+    display: flex;
+    justify-content: right;
+}
+.top-right{
+    display: flex;
+    justify-content:space-evenly;
+    width: 60%;
+}
